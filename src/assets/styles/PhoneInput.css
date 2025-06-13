@@ -1,0 +1,105 @@
+/* Overall PhoneInput container styling */
+.PhoneInput {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #0f172a; /* Slate-900 equivalent */
+  border: 1px solid #475569; /* Slate-700 equivalent */
+  border-radius: 0.5rem; /* rounded-lg equivalent */
+  color: #fff; /* text-white equivalent */
+  padding-left: 1rem; /* px-4 equivalent */
+  padding-right: 1rem; /* px-4 equivalent */
+  height: 42px; /* Adjust height to match other inputs */
+}
+
+.phone-input-error.PhoneInput {
+    border-color: #ef4444; /* Red-500 equivalent for error state */
+}
+
+.PhoneInput.focus-within {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5); /* Indigo-500 focus ring */
+}
+
+.phone-input-error.PhoneInput.focus-within {
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.5); /* Red-500 focus ring for error */
+}
+
+
+/* Styling the country select dropdown */
+.PhoneInputCountry {
+    margin-right: 0.5rem; /* Space between flag and number input */
+    padding-right: 0.5rem; /* For the separator */
+    border-right: 1px solid #475569; /* Slate-700 equivalent */
+    height: 100%; /* Make sure it takes full height */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the actual country dropdown button */
+.PhoneInputCountrySelect {
+    background-color: transparent; /* No background */
+    border: none;
+    color: #fff; /* Text color */
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem; /* Match other input font size */
+    outline: none; /* Remove default outline */
+    -webkit-appearance: none; /* Remove default arrow on select */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Styling for the dropdown menu */
+.PhoneInputCountrySelectArrow {
+  color: #94a3b8; /* Slate-400 for arrow */
+}
+
+.PhoneInputCountrySelect:focus + .PhoneInputCountrySelectArrow {
+    color: #6366f1; /* Indigo-500 on focus */
+}
+
+
+/* Styling the phone number input field */
+.PhoneInputInput {
+  background-color: transparent; /* Make input background transparent */
+  border: none; /* Remove input border */
+  color: #fff; /* Text color for phone number */
+  padding-top: 0.5rem; /* py-2 equivalent */
+  padding-bottom: 0.5rem; /* py-2 equivalent */
+  width: 100%; /* Take remaining width */
+  outline: none; /* Remove default outline */
+  font-size: 1rem; /* Match other input font size */
+  line-height: 1.5rem; /* Match other input line height */
+}
+
+/* Placeholder color for the input */
+.PhoneInputInput::placeholder {
+  color: #64748b; /* Slate-500 equivalent */
+}
+
+/* Adjusting the dropdown list itself */
+.PhoneInputCountrySelect option {
+    background-color: #0f172a; /* Slate-900 for options background */
+    color: #fff; /* White text for options */
+}
+
+/* For the dropdown menu (if it appears as a separate overlay) */
+.PhoneInputCountryList {
+    background-color: #0f172a !important; /* Force dark background */
+    border: 1px solid #475569 !important; /* Dark border */
+    color: #fff !important; /* White text */
+}
+
+.PhoneInputCountryList .PhoneInputCountry {
+  background-color: #0f172a !important; /* Ensure list items also have dark background */
+  color: #fff !important; /* Ensure list items also have white text */
+}
+
+.PhoneInputCountryList .PhoneInputCountry:hover {
+  background-color: #1e293b !important; /* Slightly lighter slate for hover */
+}
+
+.PhoneInputCountryList .PhoneInputCountry--selected {
+  background-color: #312e81 !important; /* Indigo-900 for selected item */
+}
